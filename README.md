@@ -57,7 +57,7 @@ using var client = options.CreateHttpClient();
 // The value of json will be: {"Id":1, "Link":"https://www.just-eat.co.uk/privacy-policy"}
 string json = await client.GetStringAsync("https://public.je-apis.com/terms");
 ```
-<sup><a href='/tests/HttpClientInterception.Tests/Examples.cs#L50-L72' title='Snippet source file'>snippet source</a> | <a href='#snippet-minimal-example' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/HttpClientInterception.Tests/Examples.cs#L45-L67' title='Snippet source file'>snippet source</a> | <a href='#snippet-minimal-example' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 `HttpRequestInterceptionBuilder` objects are mutable, so properties can be freely changed once a particular setup has been registered with an instance of `HttpClientInterceptorOptions` as the state is captured at the point of registration. This allows multiple responses and paths to be configured from a single `HttpRequestInterceptionBuilder` instance where multiple registrations against a common hostname.
@@ -143,7 +143,7 @@ var client = options.CreateHttpClient();
 await Assert.ThrowsAsync<HttpRequestException>(
     () => client.GetStringAsync("http://public.je-apis.com"));
 ```
-<sup><a href='/tests/HttpClientInterception.Tests/Examples.cs#L29-L44' title='Snippet source file'>snippet source</a> | <a href='#snippet-fault-injection' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/HttpClientInterception.Tests/Examples.cs#L24-L39' title='Snippet source file'>snippet source</a> | <a href='#snippet-fault-injection' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 #### Registering Request Interception When Using IHttpClientFactory
@@ -182,7 +182,7 @@ public sealed class HttpClientInterceptionFilter : IHttpMessageHandlerBuilderFil
     }
 }
 ```
-<sup><a href='/samples/SampleApp.Tests/HttpClientInterceptionFilter.cs#L10-L39' title='Snippet source file'>snippet source</a> | <a href='#snippet-interception-filter' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/samples/SampleApp.Tests/HttpClientInterceptionFilter.cs#L9-L38' title='Snippet source file'>snippet source</a> | <a href='#snippet-interception-filter' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 #### Setting Up HttpClient for Dependency Injection Manually

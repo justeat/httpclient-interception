@@ -3,7 +3,6 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SampleApp.Extensions;
@@ -18,7 +17,6 @@ namespace SampleApp
 
             services
                 .AddControllers()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddJsonOptions((p) => p.JsonSerializerOptions.WriteIndented = true);
         }
 
